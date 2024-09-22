@@ -1,1 +1,1 @@
-An atm <br> Mainly based on c with a little touch of cpp. It have some amazing features like, Cash Withdraw , Cash Deposit , Send Money (One Card To Another Card).
+An atm <br> Mainly based on c with a little touch of cpp. It have some amazing features like, Cash Withdraw , Cash Deposit , Send Money (One Card To Another Card), Check Balance, Change Pin, Forget Password. Here, All Information's Are Stored In A Text File "data.txt" & A Extra File Which Count The Number Of Card Created. 
