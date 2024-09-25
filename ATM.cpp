@@ -65,9 +65,10 @@ bool count(int n) // Count the Length Of Card Pin Is Four Or Not While Password 
 void Insert_data(int n, char name[50], long long int number, int pass, int ex_m, int ex_y, long int balance) // it Inserts The new Card Details Into the Database Called "data.txt"
 {
     FILE *fp;
+    char str[10]="         ";
     fp = fopen("data.txt", "a");
     rewind(fp);
-    fprintf(fp, "%d %s %lld %d %d %d %ld\n", n, name, number, pass, ex_m, ex_y, balance);
+    fprintf(fp, "%d %s %lld %d %d %d %ld %s\n", n, name, number, pass, ex_m, ex_y, balance,str);
     fclose(fp);
 }
 int set_password() // when A Card Is Created It Generate The Card Password
@@ -749,9 +750,7 @@ void update_balance_2o(int balance,FILE *fp, struct card *data) //update the bal
         fseek(fp, 2 + 1 + a + 1 + 12 + 1 + 4 + 1 + 1 + 1 + 4 + 1, SEEK_CUR);
     int s = count_number(balance);
     int e = count_number(data->card_balance);
-    if(data->card_balance==0)
-        fprintf(fp, "%d\n", balance);
-   else
+   
     fprintf(fp, "%d", balance);
     if (e > s)
     {
@@ -774,9 +773,7 @@ void update_balance(int balance, FILE *fp, struct card *data) // update the bala
         fseek(fp, 2 + 1 + a + 1 + 12 + 1 + 4 + 1 + 1 + 1 + 4 + 1, SEEK_CUR);
     int s = count_number(balance);
     int e = count_number(data->card_balance);
-      if(data->card_balance==0)
-        fprintf(fp, "%d\n", balance);
-        else
+     
     fprintf(fp, "%d", balance);
     if (e > s)
     {
