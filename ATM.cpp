@@ -20,7 +20,7 @@ struct card               // Structure Of Card
     int card_pin;
     int card_exmonth;
     int card_exyear;
-    long int card_balance = 0;
+    long int card_balance = 1000;
     char name[50];
 };
 struct card *globalCard_data = (struct card *)malloc(sizeof(struct card)); // A Card Type global Variable To take The Users Data From Database To Programme
@@ -774,6 +774,9 @@ void update_balance(int balance, FILE *fp, struct card *data) // update the bala
         fseek(fp, 2 + 1 + a + 1 + 12 + 1 + 4 + 1 + 1 + 1 + 4 + 1, SEEK_CUR);
     int s = count_number(balance);
     int e = count_number(data->card_balance);
+      if(data->card_balance==0)
+        fprintf(fp, "%d\n", balance);
+        else
     fprintf(fp, "%d", balance);
     if (e > s)
     {
