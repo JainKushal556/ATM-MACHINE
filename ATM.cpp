@@ -1115,7 +1115,6 @@ void Atm_operations() // All Atm Operations Called By Here
 // Main Function
 int main()
 {
-
     printf("\n\n");
     while (loop)
     {
@@ -1149,7 +1148,6 @@ int main()
                     else
                     {
                         struct card *temp = (struct card *)malloc(sizeof(struct card));
-
                         char name[20];
                         gets(name);
                         printf("Full name: ");
