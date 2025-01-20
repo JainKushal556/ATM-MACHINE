@@ -409,7 +409,6 @@ int verify_cardNo(long long int c, FILE *fp, struct card *data) // check user gi
 }
 int verify_pin(int c) // check user given card number in databse
 {
-    processing();
     if (c != globalCard_data->card_pin)
     {
         printf("...Wrong Card Password...\n      Try Again");
