@@ -42,3 +42,28 @@ This **ATM Simulation System** offers users the ability to perform essential ban
 ---
 
 ## 🗂️ **Project Structure**
+
+The **ATM Simulation System** is thoughtfully organized for simplicity and scalability:
+
+```plaintext
+📦 atm-simulation
+├── 📜 atm.c                # Core ATM functionalities implemented in C
+├── 📜 atm.cpp              # Optional C++ features for object-oriented design
+├── 📜 data.txt             # Stores user data (card info, PINs, balances)
+├── 📜 card_count.txt       # Tracks the total number of cards/accounts created
+├── 📜 README.md            # Project documentation (you're reading this!)
+├── 📜 LICENSE              # Licensing information (MIT license)
+├── 📂 assets/              # Visual assets for the project
+│   ├── atm_icon.png        # Icon for the README header
+│   └── demo.gif            # GIF showcasing the program in action
+├── 📂 test_cases/          # Test cases for program validation
+│   ├── input1.txt          # Sample input for Cash Withdraw
+│   ├── input2.txt          # Sample input for Cash Deposit
+│   ├── input3.txt          # Sample input for Money Transfer
+│   └── expected_output.txt # Expected results for the test cases
+├── 📂 logs/                # Logs for debugging and tracking
+│   └── error_log.txt       # Tracks errors encountered during execution
+└── 📂 future/              # Modules for planned enhancements
+    ├── encryption_module.c  # For encrypting sensitive data (upcoming feature)
+    └── database_support.c   # For integrating a database system (upcoming feature)
+
